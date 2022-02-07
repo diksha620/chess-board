@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chess board</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      .cell {
+        height: 30px;
+        width: 30px;
+        border: 1.5px solid grey;
+        border-style: inset;
+      }
+
+      .blackcell {
+        background-color: burlywood;
+      }
+
+      .whitecell {
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <span style="color: green; font-size: 30px"> Chess Board game </span>
+    <br /><br />
+    <script>
+        var no = window.prompt("Enter the no: ");
+          if(!isNaN(no)){
+          let center = document.createElement('center');
+            let ChessTable = document.createElement('table');
+      		for (let i = 0; i <no ; i++) {
+
+      			let tr = document.createElement('tr');
+      			for (let j = 0; j < no; j++) {
+      				let td = document.createElement('td');
+      				if ((i + j) % 2 == 0) {
+      					td.setAttribute('class', 'cell whitecell');
+      					tr.appendChild(td);
+      				}
+      				else {
+      					td.setAttribute('class', 'cell blackcell');
+      					tr.appendChild(td);
+      				}
+      			}      		
+      			ChessTable.appendChild(tr);
+      		}
+      		center.appendChild(ChessTable);
+
+      		ChessTable.setAttribute('cellspacing', '0');
+      		ChessTable.setAttribute('width', '270px');
+      		document.body.appendChild(center); 
+          }
+          else {
+            document.write("please enter no");
+          }
+              
+    </script>
+  </body>
+</html>
