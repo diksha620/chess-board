@@ -9,21 +9,23 @@ const func = () => {
     if(no <= 50 && no >=1){
       play(no);
       document.getElementById('btn1').style.display = "block";
+      document.getElementById("heading").style.display = "none";
+        
 
     }
     else if(no <= 0){
-        document.getElementById("heading").style.display = "block";
+        //document.getElementById("heading").style.display = "block";
         document.getElementById("heading").innerHTML = "please enter positive no";
         document.getElementById("btn1").style.display = "block";
         
     }
     else if (no >= 50){
-        document.getElementById("heading").style.display = "block";
+        //document.getElementById("heading").style.display = "block";
         document.getElementById("heading").innerHTML = "please enter no upto 50";
         document.getElementById("btn1").style.display = "block";
     }
     else {
-        document.getElementById("heading").style.display = "block";
+        //document.getElementById("heading").style.display = "block";
         document.getElementById("heading").innerHTML = "please enter valid no";
         document.getElementById("btn1").style.display = "block";
     } 
